@@ -1,1 +1,1 @@
-# yaanis
+# Yaanis est une application mobile de e-commerce
