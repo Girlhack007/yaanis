@@ -22,7 +22,7 @@ export class AuthentificationService {
   return this.ngFireAuth.signOut();
   }
 
-  async getProfil(){
+  async getProfile(){
   return this.ngFireAuth.currentUser;
   }
 }

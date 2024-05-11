@@ -1,13 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">signup</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <div class="container">
+    <h4>Connexion</h4>
+  <form [formGroup]="regForm" novalidate>
+  <ion-item>
+    <ion-icon name="person-sharp"></ion-icon>
+  <ion-input forControlName="fullname" placeholder="Saisir votre nom" >Nom</ion-input>
+  </ion-item>
+<div *ngIf="this.regForm.controls?.['fullname'] && this.regForm.controls?.['fullname']">
+<ion-text>
+Ce champs estnécessaire
+</ion-text>
+</div>
+  <ion-item>
+    <ion-icon name="mail-sharp"></ion-icon>
+  <ion-input forControlName="email"  placeholder="Saisir votre e-mail" >E-mail</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="lock-closed-sharp"></ion-icon>
+  <ion-input forControlName="password"  placeholder="Saisir votre mot de passe" >Mot de passe</ion-input>
+  </ion-item>
+  <ion-button class="btn" [routerLink]="['/tabs/tab1']" >Inscription</ion-button>
+<div class="connect">
+  <p>Vous avez déjà un compte ? <a href="/login">Connexion</a></p>
+
+</div>
+  </form>
+  </div>
+  </ion-content>
